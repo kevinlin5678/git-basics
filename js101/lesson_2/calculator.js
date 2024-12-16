@@ -57,3 +57,36 @@ switch (operation) {
 }
 
 prompt(`The result is ${output}`);
+
+
+/* 
+Need 
+1. the loan amount
+2. the Annual Percentage Rate (APR)
+3. the loan duration
+4. monthly interest rate (APR / 12)
+5. loan duration in months
+6. Try to print the payment amount as a dollar and cents amount, e.g., $123.45 or $371.00
+
+let m = p * (j / (1 - Math.pow((1 + j), (-n)))); <--- formula for monthly interest payment calculator
+
+m = monthly payment
+p = loan amount
+j = monthly interest rate
+n = loan duration in months
+
+PSEUDO CODE:
+
+'welcome to interest payment calculator 1.0, please follow the instructions and input your date to figure out your monthly payment!'
+
+to figure out for 'p': 'what is the total of your loan amount?'
+
+to figure out for 'APR': 'what is your Annual Percentage Rate (APR)?'
+
+to figure out loan duration in 'loanDuration': 'what is the duration of your loan in months?'
+
+
+*/
+
+
+
