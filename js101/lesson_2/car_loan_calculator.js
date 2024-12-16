@@ -1,5 +1,5 @@
-/* 
-Need 
+/*
+Need
 1. the loan amount
 2. the Annual Percentage Rate (APR)
 3. the loan duration
@@ -32,16 +32,16 @@ function prompt(msg) {
 }
 
 function invalidNumber(num) {
-  return num.trimStart() === '' || Number.isNaN(Number(num)) || Number(num) < 0 || Number(num) === 0
+  return num.trimStart() === '' || Number.isNaN(Number(num)) || Number(num) < 0 || Number(num) === 0;
 }
 
 function notProperMonth(num) {
-  return Number(num) < 0 || Number.isInteger(Number(num)) === false || Number(num) === 0 || num.trimStart() === '' || Number.isNaN(Number(num))
+  return Number(num) < 0 || Number.isInteger(Number(num)) === false || Number(num) === 0 || num.trimStart() === '' || Number.isNaN(Number(num));
 }
 
-prompt('Welcome to Loan Payment Calculator v1.0! Please follow the instructions and input your data to figure out your monthly payment!')
+prompt('Welcome to Loan Payment Calculator v1.0! Please follow the instructions and input your data to figure out your monthly payment!');
 
-prompt('What is your loan amount in total?')
+prompt('What is your loan amount in total?');
 let totalLoanAmount = readline.question();
 
 while (invalidNumber(totalLoanAmount)) {
@@ -50,7 +50,7 @@ while (invalidNumber(totalLoanAmount)) {
 }
 console.clear();
 
-prompt('What is your Annual Percentage Rate (APR)? Enter this as this as a whole number, not a decimal (4.5% would be 4.5 not 0.045)')
+prompt('What is your Annual Percentage Rate (APR)? Enter this as this as a whole number, not a decimal (4.5% would be 4.5 not 0.045)');
 let APR = readline.question();
 
 while (invalidNumber(APR)) {
@@ -59,7 +59,7 @@ while (invalidNumber(APR)) {
 }
 console.clear();
 
-prompt('What is your loan duration in months?')
+prompt('What is your loan duration in months?');
 let loanDuration = readline.question();
 
 while (notProperMonth(loanDuration)) {
@@ -68,7 +68,7 @@ while (notProperMonth(loanDuration)) {
 }
 console.clear();
 
-let monthlyInterestRate = ((Number(APR) / 100)/ 12);
+let monthlyInterestRate = ((Number(APR) / 100) / 12);
 
 totalLoanAmount = Number(totalLoanAmount);
 loanDuration = Number(loanDuration);
@@ -79,6 +79,6 @@ prompt(`You entered:
   Loan Amount: $${totalLoanAmount}
   APR: ${APR}%
   Loan Duration: ${loanDuration} months`);
-prompt(`Your monthly interest rate is ${(monthlyInterestRate * 100).toFixed(2)}% for ${loanDuration} months.`) 
-prompt(`Your monthly payment is  $${monthlyPayment.toFixed(2)}.`)
+prompt(`Your monthly interest rate is ${(monthlyInterestRate * 100).toFixed(2)}% for ${loanDuration} months.`);
+prompt(`Your monthly payment is  $${monthlyPayment.toFixed(2)}.`);
 prompt(`You will end up paying $${((monthlyPayment * loanDuration) - totalLoanAmount).toFixed(2)} in interest over the duration of your loan.`);
