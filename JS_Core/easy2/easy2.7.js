@@ -17,6 +17,17 @@ console.log(xor(0, 0) === false);         // true
 */
 
 //my answer
+function xor(arg1, arg2) {
+  if ((arg1 && !arg2) || (arg2 && !arg1)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
 
 //SOLUTION
+function xor(value1, value2) {
+  return Boolean((value1 && !value2) || (value2 && !value1));
+}
